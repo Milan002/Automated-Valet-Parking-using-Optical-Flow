@@ -51,7 +51,7 @@ print(device)
 model=Net_2st()
 results=[]
 
-model.load_state_dict(torch.load('C:/Users/Milan/Desktop/mini_project_final/main/flow.pth', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load('flow.pth', map_location=torch.device('cpu')))
 
 # model=model.cuda()
 model = model.cpu()
@@ -62,7 +62,7 @@ step=0
 print("Ready !")
 
 driving_result=[]
-wheel=cv2.imread('C:/Users/Milan/Desktop/mini_project_final/main/steering_wheel.jpg')
+wheel=cv2.imread('steering_wheel.jpg')
 smoothed_angle=0
 with torch.no_grad():
         for i,data in enumerate(test_loader):

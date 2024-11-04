@@ -125,7 +125,7 @@ print(device)
 model=Net_2st()
 results=[]
 
-model.load_state_dict(torch.load('C:/Users/Milan/Desktop/mini_project_final/main/flow.pth', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load('flow.pth', map_location=torch.device('cpu')))
 
 # model=model.cuda()
 model = model.cpu()
